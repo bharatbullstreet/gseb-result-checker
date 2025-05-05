@@ -35,9 +35,9 @@ async function initCluster() {
     puppeteerOptions: {
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      executablePath: '/opt/render/.cache/puppeteer/chrome/linux-136.0.7103.49/chrome',
+      executablePath: '/usr/bin/google-chrome', // System-installed Chrome
     },
-    timeout: 30000
+    timeout: 60000
   });
 
   cluster.on('taskerror', (err, data) => {
