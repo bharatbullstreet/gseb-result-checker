@@ -34,7 +34,8 @@ async function initCluster() {
     maxConcurrency: 2,
     puppeteerOptions: {
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath: '/opt/render/.cache/puppeteer/chrome/linux-136.0.7103.49/chrome',
     },
     timeout: 30000
   });
